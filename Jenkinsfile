@@ -6,7 +6,7 @@ pipeline {
     }
     stages {
         stage ('Checkout'){
-            steps { Checkout scm }
+            steps { checkout scm }
         }
 
         stage ('Install'){
@@ -17,7 +17,7 @@ pipeline {
             steps { sh 'npm test' }
         }
 
-        stage ('Install'){
+        stage ('Deploy'){
             steps {
                 sh '''
                     echo "Build new DIR"
@@ -31,7 +31,7 @@ pipeline {
             }
         }
     }
-    
+
     post {
         success {
             echo "Pipeline SUCCESS: build, test, deploy OK"
