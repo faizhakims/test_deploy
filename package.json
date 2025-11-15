@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "scripts": {
         "start": "node app.js",
-        "test": "node /home/hakims/Documents/testDeploy/test/test-runner.js"
+        "test": "node ./test/test-runner.js"
     },
     "dependencies": {}
 }
