@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DEPLOY_DIR = "/home/hakims/Documents"
+        DEPLOY_DIR = "/var/lib/jenkins/deploy/test-deploy"
     }
     stages {
         stage ('Checkout'){
